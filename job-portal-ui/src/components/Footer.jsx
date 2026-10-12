@@ -160,10 +160,15 @@ const Footer = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
                 </button>
               </Tooltip>
-              <a className="group relative hover:text-white transition-colors duration-300">
-                <span className="relative z-10">Cookie Policy</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
-              </a>
+              <Tooltip content="We use cookies to enhance your browsing experience, analyse site traffic, and personalise content. By continuing to use JobPortal, you consent to our use of cookies.">
+                <button
+                  type="button"
+                  className="group relative hover:text-white transition-colors duration-300"
+                >
+                  <span className="relative z-10">Cookie Policy</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                </button>
+              </Tooltip>
               <Link
                 to="/contact"
                 className="group relative hover:text-white transition-colors duration-300"

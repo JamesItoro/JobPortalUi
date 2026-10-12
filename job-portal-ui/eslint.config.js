@@ -23,6 +23,8 @@ export default defineConfig([
       },
     },
     rules: {
+      // Ignores unused vars starting with an uppercase letter or underscore
+      // (e.g. unused destructured React components, intentionally-unused `_` placeholders)
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
     },
   },

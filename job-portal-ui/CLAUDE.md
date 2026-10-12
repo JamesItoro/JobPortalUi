@@ -43,3 +43,14 @@ Three roles with route protection via `ProtectedRoute` component:
 ### ESLint
 
 Flat config (`eslint.config.js`). The `no-unused-vars` rule ignores variables starting with uppercase or underscore (`varsIgnorePattern: '^[A-Z_]'`).
+
+## Git Workflow
+
+- **Commit messages**: imperative mood, concise subject line (≤72 chars), blank line before a longer body if needed (e.g. `fix: correct saved-jobs localStorage key`). Prefer [Conventional Commits](https://www.conventionalcommits.org/) prefixes (`feat`, `fix`, `refactor`, `chore`, `docs`, `test`) where it adds clarity.
+- **Branching**: never commit directly to `main`. Create a feature/fix branch (`feat/<short-desc>`, `fix/<short-desc>`) and open a PR.
+- **Small, focused commits**: one logical change per commit; don't bundle unrelated fixes.
+- **Before committing**: run `npm run lint` and confirm `npm run build` succeeds.
+- **Never commit**: `node_modules/`, `dist/`, `.env*` files, `.DS_Store`, or other secrets/build artifacts — keep `.gitignore` current.
+- **Never rewrite published history**: no `git push --force` / `--force-with-lease` to `main`, no `git rebase -i` or amending commits that are already pushed and shared.
+- **Review before pushing**: check `git status` and `git diff --staged` so only intended files are included.
+- **Pull requests**: clear title, summary of what/why, and a test plan; link related issues.
